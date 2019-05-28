@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <%= link_to 'Admin', admin_root_path %>
+    |
+    <%= link_to 'Public', root_path %>
+    |
+    <% if current_user.present? %>
+      <%= link_to 'SignOut', destroy_user_session_path %>
+    <% end %>
+    <br/>
     <%= yield %>
   </body>
 </html>
