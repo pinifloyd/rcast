@@ -15,4 +15,14 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-console.log('Hello World from Webpacker')
+console.log('Hello World from Webpacker');
+
+// import '../src/application.scss';
+import 'font-awesome/css/font-awesome.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'adminlte/dist/css/AdminLTE.css'
+import 'adminlte/dist/css/skins/_all-skins.css'
+
+import 'jquery/dist/jquery.js'
+import 'bootstrap/dist/js/bootstrap.js'
+import 'adminlte/dist/js/adminlte.js'
