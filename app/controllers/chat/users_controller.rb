@@ -1,9 +1,9 @@
-class ApplicationController < ActionController::Base
+class Chat::UsersController < ApplicationController
 
   # :nodoc
   #----------------------------------------------------------------------------
-  def home
-
+  def index
+    @users = ::User.all
   end
 
 end
