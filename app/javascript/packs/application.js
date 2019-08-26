@@ -30,4 +30,4 @@ import 'admin-lte/dist/js/adminlte.js'
 
 // :nodoc
 //-----------------------------------------------------------------------------
-import './scenes';
+// import '../src/scenes';
