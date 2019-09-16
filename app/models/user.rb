@@ -1,4 +1,8 @@
-class User
+class User < ApplicationRecord
+
+  # :nodoc
+  #----------------------------------------------------------------------------
+  devise :database_authenticatable, :rememberable, :validatable, :trackable
 
   # :nodoc
   #----------------------------------------------------------------------------
