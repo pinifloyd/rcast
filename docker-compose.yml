@@ -1,0 +1,30 @@
+version: '3.4'
+services:
+  db:
+    image: postgres:9.6.15
+    environment:
+      # POSTGRES_USER: $DB_USERNAME
+      # POSTGRES_PASSWORD: $DB_PASSWORD
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 
+  webpacker:
+    build: .
+    env_file:
+      - .env.docker
+    command: ./bin/webpack-dev-server
+    volumes:
+      - .:/app
+    ports:
+      - 3035:3035
+  web:
+    build: .
+    command: bundle exec rails s -b '0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - 3001:3000
+    depends_on: 
+      - db
+      - webpacker
+    links:
+      - db
